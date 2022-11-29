@@ -1,7 +1,7 @@
 import React from "react";
 
 const CartWidget = () => {
-  return <i class="bi bi-cart3"></i>;
+  return <button className="bi bi-cart3"></button>;
 };
 
 export default CartWidget;
