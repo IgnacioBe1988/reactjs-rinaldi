@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
-import itemsMock from "../mocks/items.mock";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState(null);
+  const parametros = useParams();
 
-  useEffect(() => {
-    new Promise((resolve) => setTimeout(() => resolve(itemsMock), 2000)).then(
-      (data) => setItem(data)
-    );
-  }, []);
+  return <div>{parametros.id}</div>;
 };
 
 export default ItemDetailContainer;
