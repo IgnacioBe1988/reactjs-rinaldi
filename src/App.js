@@ -1,19 +1,19 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ItemListContainer from "./components/ItemListContainer";
 import Title from "./components/Title";
-import ItemDetailContainer from "./components/ItemDetailContainer";
 import Layout from "./components/Layout";
+import { CartContext } from "./context/cartContext";
 
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <Title />
-        <ItemDetailContainer />
-        <ItemListContainer />
-      </Layout>
+      <CartContext.Provider value={[]}>
+        <Layout>
+          <Title />
+          <ItemListContainer />
+        </Layout>
+      </CartContext.Provider>
     </div>
   );
 }

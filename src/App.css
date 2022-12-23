@@ -13,3 +13,11 @@ ul {
   justify-content: space-around;
   text-align: center;
 }
+
+.probando {
+  height: 50px;
+}
+
+body img {
+  height: 250px;
+}
